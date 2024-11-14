@@ -329,6 +329,10 @@ require('lazy').setup({
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
+
+      triggers = {
+        { '<auto>', mode = 'nxsoi' },
+      },
     },
   },
 

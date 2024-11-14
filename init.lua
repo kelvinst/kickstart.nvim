@@ -157,6 +157,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Set the text default width
+vim.opt.textwidth = 98
+
+-- Show a colored line on the limit
+vim.opt.colorcolumn = '+1'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -887,6 +893,11 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+
+      -- Use the same color as the line
+      local cursor_line_output = vim.api.nvim_exec2('hi CursorLine', { output = true }).output
+      local cursor_line_color = string.match(cursor_line_output, 'guibg=(#%x+)')
+      vim.cmd.hi('ColorColumn guibg=' .. cursor_line_color)
     end,
   },
 

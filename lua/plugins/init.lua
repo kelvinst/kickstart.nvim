@@ -31,6 +31,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  require 'plugins.auto-session', -- Save and load session
   require 'plugins.vim-tmux-navigator', -- Navigate between Neovim and Tmux panes
   require 'plugins.which-key', -- Useful plugin to show you pending keybinds.
   require 'plugins.telescope', -- Fuzzy Finder (files, lsp, etc)

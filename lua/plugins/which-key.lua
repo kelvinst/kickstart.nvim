@@ -41,6 +41,7 @@ return { -- Useful plugin to show you pending keybinds.
 
     -- Document existing key chains
     spec = {
+      { 's', group = '[S]urround' },
       { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
       { '<leader>d', group = '[D]ocument' },
       { '<leader>r', group = '[R]ename' },
@@ -52,6 +53,7 @@ return { -- Useful plugin to show you pending keybinds.
 
     triggers = {
       { '<auto>', mode = 'nxsoi' },
+      { 's' },
     },
   },
 }

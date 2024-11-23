@@ -42,9 +42,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
         git_command = {
           'git',
           'ls-files',
-          '--recurse-submodules',
           '--exclude-standard',
           '--cached',
+          '--others',
         },
       }
     end, {

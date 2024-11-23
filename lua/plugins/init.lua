@@ -30,30 +30,30 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   require 'plugins.auto-session', -- Save and load session
-  require 'plugins.vim-tmux-navigator', -- Navigate between Neovim and Tmux panes
-  require 'plugins.which-key', -- Useful plugin to show you pending keybinds.
-  require 'plugins.telescope', -- Fuzzy Finder (files, lsp, etc)
+  require 'plugins.cmp', -- Autocompletion
   require 'plugins.conform', -- Autoformat
   require 'plugins.copilot', -- Github Copilot suggestions AI
-  require 'plugins.cmp', -- Autocompletion
-  require 'plugins.tokyonight', -- Colorscheme
-  require 'plugins.todo-comments', -- Highlight todo, notes, etc in comments
-  require 'plugins.mini', -- Collection of various small independent plugins/modules
-  require 'plugins.treesitter', -- Highlight, edit, and navigate code
-  require 'plugins.indent_line', -- The vertical lines for indentation levels
-  require 'plugins.neo-tree', -- Better file tree
-  require 'plugins.undotree', -- Better undo history
+  require 'plugins.dispatch', -- Asynchronous tasks
   require 'plugins.gitsigns', -- Adds gitsigns recommend keymaps
+  require 'plugins.indent_line', -- The vertical lines for indentation levels
+  require 'plugins.mini', -- Collection of various small plugins/modules
+  require 'plugins.neo-tree', -- Better file tree
   require 'plugins.neogit', -- Git UI in Neovim
+  require 'plugins.sleuth', -- Detect tabstop and shiftwidth automatically
+  require 'plugins.telescope', -- Fuzzy Finder (files, lsp, etc)
+  require 'plugins.todo-comments', -- Highlight todo, notes, etc in comments
+  require 'plugins.tokyonight', -- Colorscheme
+  require 'plugins.treesitter', -- Highlight, edit, and navigate code
+  require 'plugins.undotree', -- Better undo history
+  require 'plugins.vim-tmux-navigator', -- Navigate between Vim and Tmux panes
+  require 'plugins.which-key', -- Useful plugin to show you pending keybinds.
   -- require 'plugins.debug', -- Debugging
   -- require 'plugins.lint', -- Linting
   -- require 'plugins.autopairs', -- Autopairs
 
   -- LSP Plugins
-  require 'plugins.lazydev', -- Lua LSP for your Neovim config, runtime and plugins
-  { 'Bilal2453/luvit-meta', lazy = true },
+  require 'plugins.lazydev', -- Lua LSP for your config, runtime and plugins
   require 'plugins.lspconfig', -- Main LSP Configuration
 }, {
   ui = {

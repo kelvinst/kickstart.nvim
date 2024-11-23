@@ -24,4 +24,8 @@ vim.keymap.set({ 'n', 'v' }, '∂', '"_d') -- Alt+d
 
 vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[R]eplace [w]ord under cursor' })
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Make file e[x]ecutable' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>eq', function()
+  vim.diagnostic.setqflist()
+end, { desc = '[Q]uickfix' })
+
+qhwoiuehroiqw

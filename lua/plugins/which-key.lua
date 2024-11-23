@@ -43,6 +43,7 @@ return { -- Useful plugin to show you pending keybinds.
     spec = {
       { 's', group = '[S]urround' },
       { '<leader>d', group = '[D]ispatch' },
+      { '<leader>ds', group = '[S]tart' },
       { '<leader>e', group = '[E]rror diagnostics' },
       { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
       { '<leader>l', group = '[L]SP' },

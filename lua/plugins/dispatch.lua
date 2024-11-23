@@ -3,9 +3,9 @@ return { -- Asynchronous tasks
   event = 'VimEnter',
   keys = {
     {
-      '<leader>d<CR>',
+      '<leader>dd',
       vim.cmd.Dispatch,
-      desc = '[D]ispatch ↵',
+      desc = '[D]ispatch',
     },
     {
       '<leader>d<Space>',
@@ -13,10 +13,21 @@ return { -- Asynchronous tasks
       desc = '[D]ispatch...',
     },
     {
+      '<leader>dss',
+      vim.cmd.Start,
+      desc = '[S]tart ↵',
+    },
+    {
+      '<leader>ds<Space>',
+      ':Start ',
+      desc = '[S]tart ...',
+    },
+    {
       '<leader>dq',
       function()
         vim.cmd 'Copen!'
       end,
+      desc = '[Q]uickfix',
     },
   },
 }

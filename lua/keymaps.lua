@@ -27,5 +27,3 @@ vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc =
 vim.keymap.set('n', '<leader>eq', function()
   vim.diagnostic.setqflist()
 end, { desc = '[Q]uickfix' })
-
-qhwoiuehroiqw

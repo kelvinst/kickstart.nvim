@@ -40,6 +40,7 @@ require('lazy').setup({
   require 'plugins.mini', -- Collection of various small plugins/modules
   require 'plugins.neo-tree', -- Better file tree
   require 'plugins.neogit', -- Git UI in Neovim
+  require 'plugins.projectionist', -- Project specific settings
   require 'plugins.sleuth', -- Detect tabstop and shiftwidth automatically
   require 'plugins.telescope', -- Fuzzy Finder (files, lsp, etc)
   require 'plugins.todo-comments', -- Highlight todo, notes, etc in comments

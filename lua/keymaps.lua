@@ -27,3 +27,11 @@ vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc =
 vim.keymap.set('n', '<leader>eq', function()
   vim.diagnostic.setqflist()
 end, { desc = '[Q]uickfix' })
+
+vim.keymap.set('n', '<leader>tq', function()
+  if vim.fn.empty(vim.fn.filter(vim.fn.getwininfo(), 'v:val.quickfix')) == 1 then
+    vim.cmd 'bot copen'
+  else
+    vim.cmd 'cclose'
+  end
+end, { silent = true, desc = 'Toggle [Q]uickfix' })

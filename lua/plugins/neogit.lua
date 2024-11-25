@@ -7,14 +7,13 @@ return {
     -- Only one of these is needed.
     'nvim-telescope/telescope.nvim', -- optional
   },
-  config = true,
   keys = {
     {
       '<leader>gg',
       function()
         require('neogit').open { kind = 'floating' }
       end,
-      desc = 'Git [S]tatus',
+      desc = '[G]it Status (on root)',
     },
     {
       '<leader>g.',
@@ -45,7 +44,13 @@ return {
 
         require('neogit').open { kind = 'floating', cwd = find_git_root(vim.fn.expand '%:p') }
       end,
-      desc = 'Git Status (on current submodule)',
+      desc = '[G]it Status (on current submodule)',
     },
   },
+  config = function()
+    -- Configure which-key with the dispatch mappings
+    require('which-key').add {
+      { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
+    }
+  end,
 }

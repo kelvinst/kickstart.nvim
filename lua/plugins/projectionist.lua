@@ -5,7 +5,7 @@ return {
     vim.g.projectionist_heuristics = {
       ['&mix.exs'] = {
         ['*'] = {
-          dispatch = 'mix test',
+          make = 'mix coveralls',
           start = 'iex -S mix phx.server',
         },
         ['lib/*.ex'] = {
@@ -15,7 +15,7 @@ return {
         ['test/*_test.exs'] = {
           type = 'test',
           alternate = 'lib/{}.ex',
-          dispatch = 'mix test {file}',
+          dispatch = "mix test {file}`=v:lnum ? ':'.v:lnum : ''`",
         },
         ['mix.exs'] = { type = 'mix' },
         ['config/*.exs'] = { type = 'config' },

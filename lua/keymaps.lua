@@ -30,7 +30,7 @@ local function toggle_quickfix()
   end
 end
 
-vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[R]eplace [w]ord under cursor' })
+vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]], { desc = '[R]eplace [w]ord under cursor' })
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Make file e[x]ecutable' })
 vim.keymap.set('n', '<leader>eq', vim.diagnostic.setqflist, { desc = '[Q]uickfix' })
 vim.keymap.set('n', '<leader>tq', toggle_quickfix, { silent = true, desc = 'Toggle [Q]uickfix' })

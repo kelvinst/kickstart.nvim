@@ -10,6 +10,10 @@ return { -- Asynchronous tasks
     { '`q', copen, desc = '[Q]uickfix' },
     { "'q", copen, desc = '[Q]uickfix' },
     { 'gq', copen, desc = '[Q]uickfix' },
+
+    { '`<CR>', ':Dispatch<CR>', desc = ":'<,'>Dispatch<CR>", mode = 'v' },
+    { '`<Space>', ':Dispatch ', desc = ":'<,'>Dispatch<CR>", mode = 'v' },
+    { '`!', ':Dispatch!', desc = ":'<,'>Dispatch<CR>", mode = 'v' },
   },
   config = function()
     -- Set tmux and quickfix windows height
